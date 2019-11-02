@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Liste des achats</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
+</head>
+<body>
+  Erreur dans l'app;
+  <script type="plain/text" id="page-liste-achat">
+    <div class="page-liste-achat">
+      <h3>Liste des achats</h3>
+      <ul class="collection" id="liste-achat"></ul>
+      <a class="btn-floating btn-large waves-effect waves-light red" href="#ajouter-achat"><i class="material-icons">add</i></a>
+    </div>
+  </script>
+  <script type="plain/text" id="page-achat">
+    <h1 id="achat-nom"></h1>
+    <h2 id="achat-developpeur"></h2>
+    <p id="achat-description"></p>
+    <a href="#">Revenir &agrave; la liste</a>
+  </script>
+  <script type="plain/text" id="page-ajouter-achat">
+    <h3>Ajouter un achat</h3>
+    <article id='main' class="current">
+      <section>
+        <form id="formulaire-ajouter">
+          <fieldset>
+            <legend>Identification du achat</legend>
+            <div>
+              <label for="nom">Nom</label>
+              <input type="text" name="nom" id="achat-nom"/>
+            </div>
+            <div>
+              <label for="developpeur">Marque</label>
+              <input type="text" name="developpeur" id="achat-developpeur"/>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>D&eacute;tails sur le achat</legend>
+            <div>
+              <label for="description">Description</label>
+              <textarea name="description" id="achat-description"></textarea>
+            </div>
+          </fieldset>
+          <div>
+          <button class="btn waves-effect waves-light" type="submit" name="achat-enregistrer" id="enregistrer">Valider
+            <i class="material-icons right">check</i>
+          </button>
+          <a id="bouton-gauche" class="waves-effect waves-light btn" href="#"><i class="material-icons right">backspace</i>Retour</a>
+          </div>
+        </form>
+      </section>
+    </article>
+  </script>
+  <script type="plain/text" id="page-modifier-achat">
+    <h1>Modifier un achat</h1>
+    <article id='main' class="current">
+      <section>
+        <form id="formulaire-modifier">
+          <fieldset>
+            <legend>Identification du achat</legend>
+            <div>
+              <label for="nom">Nom</label>
+              <input type="text" name="nom" id="achat-nom"/>
+            </div>
+            <div>
+              <label for="developpeur">Marque</label>
+              <input type="text" name="developpeur" id="achat-developpeur"/>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>D&eacute;tails sur le achat</legend>
+            <div>
+              <label for="description">Description</label>
+              <textarea name="description" id="achat-description"></textarea>
+            </div>
+          </fieldset>
+          <input type="submit" id="enregistrer" name="achat-modifier" value="Modifier"/>
+        </form>
+        <a href="#">Annuler et revenir &agrave; la liste</a>
+      </section>
+    </article>
+  </script>
+
+  <script src="js/modele/Achat.js"></script>
+  <script src="js/donnee/AchatDAO.js"></script>
+  <script src="js/vue/AjouterAchatVue.js"></script>
+  <script src="js/vue/ModifierAchatVue.js"></script>
+  <script src="js/vue/AchatVue.js"></script>
+  <script src="js/vue/ListeAchatVue.js"></script>
+  <script src="js/controleur/application.js"></script>
+</body>
+</html>
