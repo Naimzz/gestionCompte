@@ -5,6 +5,7 @@
   <title>Liste des achats</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
 </head>
 <body>
@@ -23,37 +24,35 @@
     <a href="#">Revenir &agrave; la liste</a>
   </script>
   <script type="plain/text" id="page-ajouter-achat">
-    <h3>Ajouter un achat</h3>
-    <article id='main' class="current">
-      <section>
-        <form id="formulaire-ajouter">
-          <fieldset>
-            <legend>Identification du achat</legend>
-            <div>
-              <label for="nom">Nom</label>
-              <input type="text" name="nom" id="achat-nom"/>
-            </div>
-            <div>
-              <label for="montant">Marque</label>
-              <input type="text" name="montant" id="achat-montant"/>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>D&eacute;tails sur le achat</legend>
-            <div>
-              <label for="acheteur">Description</label>
-              <textarea name="acheteur" id="achat-acheteur"></textarea>
-            </div>
-          </fieldset>
-          <div>
+    <h5>Ajouter un achat</h5>
+  <div class="row">
+    <form class="col s12" id="formulaire-ajouter">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="achat-nom" type="text" class="validate">
+          <label for="achat-nom">Nom</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s4">
+          <input id="achat-montant" type="text" class="validate">
+          <label for="achat-montant">Montant</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="achat-acheteur" type="text" class="validate">
+          <label for="achat-acheteur">Acheteur</label>
+        </div>
+      </div>
+      <div>
           <button class="btn waves-effect waves-light" type="submit" name="achat-enregistrer" id="enregistrer">Valider
             <i class="material-icons right">check</i>
           </button>
           <a id="bouton-gauche" class="waves-effect waves-light btn" href="#"><i class="material-icons right">backspace</i>Retour</a>
-          </div>
-        </form>
-      </section>
-    </article>
+      </div>
+    </form>
+  </div>
   </script>
   <script type="plain/text" id="page-modifier-achat">
     <h1>Modifier un achat</h1>
