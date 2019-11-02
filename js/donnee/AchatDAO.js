@@ -32,8 +32,8 @@ var AchatDAO = function () {
 
       for (position in listeAchat) {
           var achat = new Achat(listeAchat[position].nom,
-                            listeAchat[position].developpeur,
-                            listeAchat[position].description,
+                            listeAchat[position].montant,
+                            listeAchat[position].acheteur,
                             listeAchat[position].id);
           listeAchat[position] = achat;
       }

@@ -1,6 +1,6 @@
-var Achat = function(nom, developpeur, description, id) {
+var Achat = function(nom, montant, acheteur, id) {
     this.id = id;
     this.nom = nom;
-    this.developpeur = developpeur;
-    this.description = description;
+    this.montant = montant;
+    this.acheteur = acheteur;
 };

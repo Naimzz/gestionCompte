@@ -7,8 +7,8 @@ var AchatVue = (function() {
       elementBody.innerHTML = pageAchat;
 
       document.getElementById('achat-nom').innerHTML = achat.nom;
-      document.getElementById('achat-developpeur').innerHTML = achat.developpeur;
-      document.getElementById('achat-description').innerHTML = achat.description;
+      document.getElementById('achat-montant').innerHTML = achat.montant;
+      document.getElementById('achat-acheteur').innerHTML = achat.acheteur;
     }
   }
 })();

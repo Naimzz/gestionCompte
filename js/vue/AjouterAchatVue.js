@@ -16,10 +16,10 @@ var AjouterAchatVue = (function() {
       evenement.preventDefault();
 
       var nom = document.getElementById("achat-nom").value;
-      var developpeur = document.getElementById("achat-developpeur").value;
-      var description = document.getElementById("achat-description").value;
+      var montant = document.getElementById("achat-montant").value;
+      var acheteur = document.getElementById("achat-acheteur").value;
 
-      var achat = new Achat(nom, developpeur, description, null);
+      var achat = new Achat(nom, montant, acheteur, null);
 
       actionEnregistrerAchat(achat);
     }
