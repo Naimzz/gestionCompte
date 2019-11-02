@@ -12,7 +12,7 @@ var ListeAchatVue = (function() {
 
       for (var numeroAchat in listeAchatDonnee) {
         textLi += '<li class="collection-item"><a href="#achat/' + listeAchatDonnee[numeroAchat].id + '"><div>' +
-          listeAchatDonnee[numeroAchat].nom + "</a>" + '&nbsp;&nbsp;<a class="secondary-content" href="#modifier-achat/' + listeAchatDonnee[numeroAchat].id + '"><i class="material-icons">edit</i>' +
+          listeAchatDonnee[numeroAchat].montant + "€<br>" + listeAchatDonnee[numeroAchat].nom + "</a>" + '&nbsp;&nbsp;<a class="secondary-content" href="#modifier-achat/' + listeAchatDonnee[numeroAchat].id + '"><i class="material-icons">edit</i>' +
             "</a></li>";
       }
       listeAchat.innerHTML = textLi;
