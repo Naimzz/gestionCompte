@@ -11,9 +11,8 @@ var ListeUtilisateurVue = (function() {
             var textLi = "";
 
             for (var numeroUtilisateur in listeUtilisateurDonnee) {
-                textLi += '<li class="collection-item"><a href="#utilisateur/' + listeUtilisateurDonnee[numeroUtilisateur].id + '"><div>' +
-                    listeUtilisateurDonnee[numeroUtilisateur].prenom + "</a>" + '&nbsp;&nbsp;<a class="secondary-content" href="#modifier-utilisateur/' + listeUtilisateurDonnee[numeroUtilisateur].id + '"><i class="material-icons">edit</i>' +
-                    "</a></li>";
+                textLi += '<li class="collection-item"><div>' +
+                    listeUtilisateurDonnee[numeroUtilisateur].prenom + '&nbsp;&nbsp;<div class="secondary-content"><i class="material-icons">edit</i></div></li>';
             }
             listeUtilisateur.innerHTML = textLi;
         }
