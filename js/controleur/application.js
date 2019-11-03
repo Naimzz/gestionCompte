@@ -23,7 +23,8 @@
       listeUtilisateurVue.afficher();
     } else if (hash.match(/^#ajouter-achat/)) {
 
-      var ajouterAchatVue = new AjouterAchatVue(actionAjouterAchat);
+      var listeUtilisateurDonnee = utilisateurDAO.lister();
+      var ajouterAchatVue = new AjouterAchatVue(actionAjouterAchat, listeUtilisateurDonnee);
       ajouterAchatVue.afficher();
     } else if (hash.match(/^#ajouter-utilisateur/)) {
 

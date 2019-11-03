@@ -14,7 +14,6 @@ var ListeUtilisateurVue = (function() {
                 textLi += '<li class="collection-item"><a href="#utilisateur/' + listeUtilisateurDonnee[numeroUtilisateur].id + '"><div>' +
                     listeUtilisateurDonnee[numeroUtilisateur].prenom + "</a>" + '&nbsp;&nbsp;<a class="secondary-content" href="#modifier-utilisateur/' + listeUtilisateurDonnee[numeroUtilisateur].id + '"><i class="material-icons">edit</i>' +
                     "</a></li>";
-                console.log(listeUtilisateurDonnee[numeroUtilisateur].prenom);
             }
             listeUtilisateur.innerHTML = textLi;
         }

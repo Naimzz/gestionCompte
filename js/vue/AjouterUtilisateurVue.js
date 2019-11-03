@@ -9,7 +9,7 @@ var AjouterUtilisateurVue = (function() {
 
             var formulaireAjouter = document.getElementById("formulaire-ajouter");
             formulaireAjouter.addEventListener("submit", enregistrer);
-        }
+        };
 
         var enregistrer = function(evenement) {
 
