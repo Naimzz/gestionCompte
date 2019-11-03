@@ -43,7 +43,6 @@ var AchatDAO = function () {
     this.ajouter = function(achat) {
 
         if (listeAchat.length > 0) {
-            console.log("epepepep")
             achat.id = listeAchat[listeAchat.length - 1].id + 1;
             console.log(achat.id);
         }
