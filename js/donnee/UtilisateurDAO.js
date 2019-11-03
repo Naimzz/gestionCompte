@@ -18,6 +18,7 @@ var UtilisateurDAO = function () {
                 listeUtilisateur[position].id);
             listeUtilisateur[position] = utilisateur;
         }
+
         return listeUtilisateur;
     };
 
@@ -25,19 +26,23 @@ var UtilisateurDAO = function () {
 
         if (listeUtilisateur.length > 0) {
             utilisateur.id = listeUtilisateur[listeUtilisateur.length - 1].id + 1;
-            console.log(utilisateur.prenom);
         }
         else {
             utilisateur.id = 0;
         }
 
-        listeUtilisateur[utilisateur.id] = utilisateur;
+        listeUtilisateur[listeUtilisateur.length] = utilisateur;
         localStorage['utilisateur'] = JSON.stringify(listeUtilisateur);
     };
 
-    this.modifier = function(utilisateur) {
+    this.suprimmer = function(utilisateur) {
 
-        listeUtilisateur[utilisateur.id] = utilisateur;
+        for (let i = 0; i < listeUtilisateur.length; i++) {
+            if (listeUtilisateur[i].id == utilisateur.id) {
+                listeUtilisateur.splice(i, 1);
+            }
+        }
+
         localStorage['utilisateur'] = JSON.stringify(listeUtilisateur);
     };
 

@@ -30,7 +30,14 @@
 
       var ajouterUtilisateurVue = new AjouterUtilisateurVue(actionAjouterUtilisateur);
       ajouterUtilisateurVue.afficher();
-  } else if (hash.match(/^#modifier-achat\/([0-9]+)/)) {
+  } else if (hash.match(/^#suprimmer-utilisateur\/([0-9]+)/)) {
+
+      var naviguation = hash.match(/^#suprimmer-utilisateur\/([0-9]+)/);
+      var idUtilisateur = naviguation[1];
+
+      var suprimmerUtilisateurVue = new SuprimmerUtilisateurVue(actionSuprimmerUtilisateur, idUtilisateur);
+      suprimmerUtilisateurVue.afficher();
+    } else if (hash.match(/^#modifier-achat\/([0-9]+)/)) {
 
       var naviguation = hash.match(/^#modifier-achat\/([0-9]+)/);
       var idAchat = naviguation[1];
@@ -65,6 +72,11 @@
   var actionModifierAchat = function(achat) {
     achatDAO.modifier(achat);
     window.location.hash = "#";
+  };
+
+  var actionSuprimmerUtilisateur = function(utilisateur) {
+    utilisateurDAO.suprimmer(utilisateur);
+    window.location.hash = "#lister-utilisateur ";
   };
 
   initialiser();

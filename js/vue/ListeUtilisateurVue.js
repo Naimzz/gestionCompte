@@ -12,7 +12,7 @@ var ListeUtilisateurVue = (function() {
 
             for (var numeroUtilisateur in listeUtilisateurDonnee) {
                 textLi += '<li class="collection-item"><div>' +
-                    listeUtilisateurDonnee[numeroUtilisateur].prenom + '&nbsp;&nbsp;<div class="secondary-content"><i class="material-icons">edit</i></div></li>';
+                    listeUtilisateurDonnee[numeroUtilisateur].prenom + '&nbsp;&nbsp;<a href="#suprimmer-utilisateur/' + listeUtilisateurDonnee[numeroUtilisateur].id + '" class="secondary-content"><i class="material-icons">edit</i></a></li>';
             }
             listeUtilisateur.innerHTML = textLi;
         }
