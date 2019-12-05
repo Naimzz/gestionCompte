@@ -1,1 +1,1 @@
-# gestionCompte
+# Projet PhoneGap de gestion de compte
